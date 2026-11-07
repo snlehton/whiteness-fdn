@@ -1,7 +1,7 @@
 # Whiteness training for colorless feedback delay networks
 
 Code, trained parameters and paper for *Whiteness Training for Colorless Feedback Delay Networks*
-(Sampsa Lehtonen, 2026): [paper (PDF)](docs/paper.pdf) · [listen in the browser](https://snlehton.github.io/whiteness-fdn/).
+(Sampsa Lehtonen, 2026): [paper (PDF)](docs/2026_WhitenessFDN_lehtonen.pdf) · [listen in the browser](https://snlehton.github.io/whiteness-fdn/).
 
 A homogeneous feedback delay network (FDN) is trained on the whiteness of its unrolled impulse response,
 plus three terms that shape its first 100 ms. On the six configurations of DiffFDN [1], it comes within

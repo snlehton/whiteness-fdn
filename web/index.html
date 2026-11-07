@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FDN Preview</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>FDN Preview</h1>
+      <span class="sub">Differentiable FDN for colorless reverberation · listen to and inspect trained parameters</span>
+    </div>
+    <div class="top-actions">
+      <label class="field">Run <select id="run"></select></label>
+      <label class="btn ghost" title="Load a run export or a single FDN JSON {delays, U, b, c}">Load JSON…<input type="file" id="load" accept=".json,application/json" hidden></label>
+      <button id="theme" class="btn ghost" type="button">Theme: auto</button>
+    </div>
+  </header>
+
+  <section class="bar" aria-label="Variant">
+    <div class="seg" id="variants" role="radiogroup" aria-label="Feedback matrix variant"></div>
+    <label class="field">Compare with <select id="compare"></select></label>
+    <label class="field" id="altwrap" hidden><span id="altlabel">Variant</span> <select id="alt"></select></label>
+  </section>
+
+  <section class="bar" aria-label="Listening">
+    <label class="field">Decay
+      <select id="decay">
+        <option value="expDE">expDE · T60 2.5 s (paper test 1)</option>
+        <option value="LL">LL · lossless, 6–16 s (paper test 2)</option>
+        <option value="train">Training γ</option>
+        <option value="custom">Custom T60</option>
+      </select>
+    </label>
+    <label class="field" id="t60wrap">T60 <input type="range" id="t60" min="0.3" max="10" step="0.1" value="2.5"><output id="t60out"></output></label>
+    <label class="field">Source <select id="source"></select></label>
+    <input type="file" id="audiofile" accept="audio/*" hidden>
+    <label class="field">Wet <input type="range" id="wet" min="0" max="1" step="0.01" value="1"><output id="wetout"></output></label>
+    <label class="field">Volume <input type="range" id="vol" min="0" max="1" step="0.01" value="0.5"></label>
+    <button id="play" class="btn primary" type="button">Play</button>
+    <span id="status" class="status" role="status"></span>
+  </section>
+  <p class="keys">Keys: <kbd>1</kbd>–<kbd>8</kbd> switch variant while playing (time-aligned A/B), <kbd>Space</kbd> play/stop. Every variant is normalized to equal RMS, as in the paper's listening test.</p>
+
+  <main class="grid">
+    <article class="card">
+      <h2>Parameters <span class="hint" id="params-title"></span></h2>
+      <div id="heat"></div>
+      <table class="gains" id="gains"></table>
+      <dl class="kv" id="kv"></dl>
+    </article>
+
+    <article class="card wide">
+      <div class="card-head">
+        <h2>Impulse response</h2>
+        <div class="seg small" id="irrange">
+          <button type="button" data-v="0.1">100 ms</button>
+          <button type="button" data-v="0.5" aria-pressed="true">500 ms</button>
+          <button type="button" data-v="2">2 s</button>
+          <button type="button" data-v="all">All</button>
+        </div>
+      </div>
+      <div id="ir"></div>
+      <div class="legend" id="ir-legend"></div>
+    </article>
+
+    <article class="card wide">
+      <div class="card-head">
+        <h2>Magnitude response <span class="hint" id="mag-hint"></span></h2>
+      </div>
+      <div id="mag"></div>
+      <div class="legend" id="mag-legend"></div>
+      <div class="card-head sub">
+        <h3>Zoom (linear frequency)</h3>
+        <label class="field">From <input type="number" id="zoomf" value="550" min="0" max="23900" step="10"> Hz, 50 Hz wide</label>
+      </div>
+      <div id="magzoom"></div>
+    </article>
+
+    <article class="card">
+      <h2>Modal excitation distribution</h2>
+      <div id="hist"></div>
+      <div class="legend" id="hist-legend"></div>
+      <p class="note">|ρᵢ| from the modal decomposition at the training γ, relative to each variant's mean in dB (paper Fig. 6). Narrower and with a lower right tail = less metallic ringing.</p>
+    </article>
+
+    <article class="card">
+      <h2>Modal excitation vs. frequency</h2>
+      <div id="scatter"></div>
+      <div class="legend" id="scatter-legend"></div>
+    </article>
+
+    <article class="card">
+      <h2>Echo density</h2>
+      <div id="ned"></div>
+      <div class="legend" id="ned-legend"></div>
+      <p class="note">Normalized echo density (Abel &amp; Huang), 20 ms window. 1 = Gaussian-noise-like.</p>
+    </article>
+
+    <article class="card">
+      <h2>Training loss</h2>
+      <div id="loss"></div>
+      <div class="legend" id="loss-legend"></div>
+      <div id="losscomp"></div>
+      <div class="legend" id="losscomp-legend"></div>
+    </article>
+
+    <article class="card wide">
+      <h2>Metrics</h2>
+      <div class="table-wrap"><table class="metrics" id="metrics"></table></div>
+    </article>
+  </main>
+  <script type="module" src="app.js?v=2"></script>
+</body>
+</html>

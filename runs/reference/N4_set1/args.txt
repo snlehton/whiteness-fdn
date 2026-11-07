@@ -1,0 +1,18 @@
+alpha,300
+batch_size,4
+delays,[1499.0, 1889.0, 2381.0, 2999.0]
+device,cuda
+gain_per_sample,0.9999
+init_param,None
+log_epochs,True
+lr,0.001
+max_epochs,15
+max_nfft,480000
+min_nfft,384000
+n_runs,1
+num,256
+samplerate,48000
+shuffle,True
+split,0.8
+testname,test
+train_dir,C:\projects\audio-plugins\ai-reverb\runs\reference\N4_set1

@@ -1,0 +1,17 @@
+[project]
+name = "whiteness-fdn"
+version = "0.1.0"
+description = "Whiteness training for colorless feedback delay networks: a differentiable FDN trained on its unrolled impulse response"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.2",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "soundfile",
+    "tqdm",
+]
+
+[tool.uv]
+package = false

@@ -4,5 +4,4 @@ runs/cache/
 runs/**/modal_*.npz
 runs/**/*.pt
 runs/**/*.log
-web/data/
 external/

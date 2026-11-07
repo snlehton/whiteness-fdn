@@ -115,27 +115,27 @@
   "custom": {
    "n_modes": 4384,
    "n_unexcited": 0,
-   "std_db": 3.8741152329710453,
-   "max_db": 8.659017744220975,
-   "p99_db": 7.092605309420879,
-   "p95_db": 5.249896176582262,
-   "p01_db": -13.010885057780559,
-   "frac_above_6db": 0.02988138686131387,
-   "diag_energy": 0.6305897869511787,
+   "std_db": 3.8714873518382973,
+   "max_db": 8.56564828853729,
+   "p99_db": 7.112514184941991,
+   "p95_db": 5.244779041390688,
+   "p01_db": -12.977272691972516,
+   "frac_above_6db": 0.030337591240875914,
+   "diag_energy": 0.631178302429362,
    "diag_energy_dense_ref": 0.25,
-   "mag_std_db": 7.3154693824269605,
-   "mag_p99_db": 11.06595070924069,
-   "sparsity_ir": 0.038005944546912744,
+   "mag_std_db": 7.351630325099518,
+   "mag_p99_db": 10.98633041752665,
+   "sparsity_ir": 0.037803733829400374,
    "ned_mean_0_100ms": 0.008796749185269622,
-   "ned_mean_100_500ms": 0.14989248320657605,
-   "ned_mean_500_1000ms": 0.5266343558064952,
+   "ned_mean_100_500ms": 0.1500976630508977,
+   "ned_mean_500_1000ms": 0.5239928551304478,
    "t_ned_0p9_ms": null
   }
  },
  "labels": {
   "custom": {
    "short": "Whiteness",
-   "long": "W20 \u00b7 W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 10"
+   "long": "W19 \u00b7 W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 3 (paper's final model for N = 4 and 6)"
   }
  }
 }

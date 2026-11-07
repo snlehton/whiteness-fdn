@@ -123,27 +123,27 @@
   "custom": {
    "n_modes": 4472,
    "n_unexcited": 0,
-   "std_db": 3.937048093884359,
-   "max_db": 7.200217209995628,
-   "p99_db": 5.6509904165605205,
-   "p95_db": 4.401953092519956,
-   "p01_db": -14.048237276164404,
-   "frac_above_6db": 0.005813953488372093,
-   "diag_energy": 0.44039069072429615,
+   "std_db": 3.5951372979600458,
+   "max_db": 6.290989191567135,
+   "p99_db": 4.869023420045177,
+   "p95_db": 3.935492644542112,
+   "p01_db": -12.932496962317584,
+   "frac_above_6db": 0.0011180679785330948,
+   "diag_energy": 0.3656454945855779,
    "diag_energy_dense_ref": 0.125,
-   "mag_std_db": 6.563026271864081,
-   "mag_p99_db": 9.57320938494352,
-   "sparsity_ir": 0.010135716753265888,
-   "ned_mean_0_100ms": 0.2836404451232232,
-   "ned_mean_100_500ms": 0.968841676917066,
-   "ned_mean_500_1000ms": 0.9907948095261121,
-   "t_ned_0p9_ms": 104.66666666666667
+   "mag_std_db": 6.055096392150774,
+   "mag_p99_db": 9.140240705554154,
+   "sparsity_ir": 0.010505292732737929,
+   "ned_mean_0_100ms": 0.2790700165272963,
+   "ned_mean_100_500ms": 0.9501225264286446,
+   "ned_mean_500_1000ms": 0.9958995363052578,
+   "t_ned_0p9_ms": 123.33333333333334
   }
  },
  "labels": {
   "custom": {
    "short": "Whiteness",
-   "long": "W17 \u00b7 W15 + build-up ramp (\u22126 dB to tail level over 150 ms), weight 10"
+   "long": "W14 \u00b7 Whiteness + mixing + density 3 + early spread (20 ms windows), weight 0.5, trained gains (paper's final model for N = 8)"
   }
  }
 }

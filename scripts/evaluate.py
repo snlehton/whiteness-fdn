@@ -44,15 +44,17 @@ C_SPECTRAL, C_TEMPORAL = "#6250d6", "#008300"
 
 # alternative training results (scripts/autocorr_study.py, runs/autocorr/<config>_<suffix>.json) offered in the
 # previewer's custom slot of each reference run: (experiment id, file suffix, label). Ids number the listenable
-# variants in the order they were made; the menu lists the newest first and preselects the first one present.
+# variants in the order they were made; the menu lists the paper's final models first, then the rest newest
+# first, and preselects the first one present.
 ALTERNATIVES = [
+    # the paper's final models first, so each configuration opens on its own (W19 for N = 4 and 6, W14 for N = 8)
+    ("W19", "white_mix1_dens3_aspread0.5n8_build30d6r150_direct3l10h22", "W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 3 (paper's final model for N = 4 and 6)"),
+    ("W14", "white_mix1_dens3_spread0.5s0.1l0.01", "Whiteness + mixing + density 3 + early spread (20 ms windows), weight 0.5, trained gains (paper's final model for N = 8)"),
     ("W20", "white_mix1_dens3_aspread0.5n8_build30d6r150_direct10l10h22", "W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 10"),
-    ("W19", "white_mix1_dens3_aspread0.5n8_build30d6r150_direct3l10h22", "W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 3"),
     ("W18", "white_mix1_dens3_aspread0.5n8_build30d6r150", "W15 + build-up ramp (−6 dB to tail level over 150 ms), weight 30"),
     ("W17", "white_mix1_dens3_aspread0.5n8_build10d6r150", "W15 + build-up ramp (−6 dB to tail level over 150 ms), weight 10"),
     ("W16", "white_mix1_dens3_aspread1n8", "Whiteness + mixing + density 3 + arrival-window spread, weight 1, trained gains"),
     ("W15", "white_mix1_dens3_aspread0.5n8", "Whiteness + mixing + density 3 + arrival-window spread, weight 0.5, trained gains"),
-    ("W14", "white_mix1_dens3_spread0.5s0.1l0.01", "Whiteness + mixing + density 3 + early spread (20 ms windows), weight 0.5, trained gains"),
     ("W13", "white_mix1_spread0.5s0.1l0.01", "Whiteness + mixing + early spread (20 ms windows), weight 0.5, trained gains"),
     ("W12", "white_mix1_spread0.5s0.1", "Whiteness + mixing + early spread (20 ms windows, first echo unseen), weight 0.5, trained gains"),
     ("W11", "white_mix1_dens3_flat3", "Whiteness + mixing + density 3 + per-sample level target (quiet start), trained gains"),

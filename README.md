@@ -1,7 +1,7 @@
 # Whiteness training for colorless feedback delay networks
 
 Code, trained parameters and paper for *Whiteness Training for Colorless Feedback Delay Networks*
-(Sampsa Lehtonen, 2026): [paper (PDF)](docs/paper.pdf).
+(Sampsa Lehtonen, 2026): [paper (PDF)](docs/paper.pdf) · [listen in the browser](https://snlehton.github.io/whiteness-fdn/).
 
 A homogeneous feedback delay network (FDN) is trained on the whiteness of its unrolled impulse response,
 plus three terms that shape its first 100 ms. On the six configurations of DiffFDN [1], it comes within
@@ -53,7 +53,11 @@ Parts that take arguments are written `name:arg:arg`, as listed in the script's 
 
 ## Listen
 
-The previewer is a static web page that renders and plays any of the FDNs:
+The previewer is online at **https://snlehton.github.io/whiteness-fdn/**. Each configuration opens on the paper's
+final model (W19 for N = 4 and 6, W14 for N = 8), and the other variants are in the "Whiteness variant" menu.
+`.github/workflows/pages.yml` publishes `web/` there on every push that changes it.
+
+To run it locally, or after changing the models, re-export the data and serve the page:
 
 ```bash
 python scripts/evaluate.py

@@ -143,7 +143,7 @@
  "labels": {
   "custom": {
    "short": "Whiteness",
-   "long": "W14 \u00b7 Whiteness + mixing + density 3 + early spread (20 ms windows), weight 0.5, trained gains"
+   "long": "W14 \u00b7 Whiteness + mixing + density 3 + early spread (20 ms windows), weight 0.5, trained gains (paper's final model for N = 8)"
   }
  }
 }

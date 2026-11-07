@@ -119,27 +119,27 @@
   "custom": {
    "n_modes": 4468,
    "n_unexcited": 0,
-   "std_db": 4.370632023363779,
-   "max_db": 6.778872910437698,
-   "p99_db": 5.668578794029922,
-   "p95_db": 4.543228979833675,
-   "p01_db": -15.74941758127769,
-   "frac_above_6db": 0.004923903312444047,
-   "diag_energy": 0.407116567588698,
+   "std_db": 3.628817637395128,
+   "max_db": 7.9779385220507635,
+   "p99_db": 5.6125060852522575,
+   "p95_db": 4.271238261842764,
+   "p01_db": -13.076288833151757,
+   "frac_above_6db": 0.006714413607878245,
+   "diag_energy": 0.48064657656025145,
    "diag_energy_dense_ref": 0.16666666666666666,
-   "mag_std_db": 5.817754191277554,
-   "mag_p99_db": 9.177877050064392,
-   "sparsity_ir": 0.014232552957917977,
-   "ned_mean_0_100ms": 0.05251173983493479,
-   "ned_mean_100_500ms": 0.6225746378671486,
-   "ned_mean_500_1000ms": 0.9534510287376915,
-   "t_ned_0p9_ms": 503.3333333333333
+   "mag_std_db": 6.382490903819721,
+   "mag_p99_db": 9.716362321552966,
+   "sparsity_ir": 0.013660412273615573,
+   "ned_mean_0_100ms": 0.04984036342663384,
+   "ned_mean_100_500ms": 0.6923854022772243,
+   "ned_mean_500_1000ms": 0.9273598358559071,
+   "t_ned_0p9_ms": 431.33333333333337
   }
  },
  "labels": {
   "custom": {
    "short": "Whiteness",
-   "long": "W20 \u00b7 W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 10"
+   "long": "W19 \u00b7 W18 + direct-echo ceiling (+10 dB shortest line to +22 dB longest), weight 3 (paper's final model for N = 4 and 6)"
   }
  }
 }

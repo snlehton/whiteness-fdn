@@ -1,0 +1,44 @@
+[
+ {
+  "id": "reference_N4_set1",
+  "group": "reference",
+  "label": "N4 set #1 \u00b7 reference/N4_set1",
+  "N": 4,
+  "file": "reference_N4_set1.json"
+ },
+ {
+  "id": "reference_N4_set2",
+  "group": "reference",
+  "label": "N4 set #2 \u00b7 reference/N4_set2",
+  "N": 4,
+  "file": "reference_N4_set2.json"
+ },
+ {
+  "id": "reference_N6_set1",
+  "group": "reference",
+  "label": "N6 set #1 \u00b7 reference/N6_set1",
+  "N": 6,
+  "file": "reference_N6_set1.json"
+ },
+ {
+  "id": "reference_N6_set2",
+  "group": "reference",
+  "label": "N6 set #2 \u00b7 reference/N6_set2",
+  "N": 6,
+  "file": "reference_N6_set2.json"
+ },
+ {
+  "id": "reference_N8_set1",
+  "group": "reference",
+  "label": "N8 set #1 \u00b7 reference/N8_set1",
+  "N": 8,
+  "file": "reference_N8_set1.json"
+ },
+ {
+  "id": "reference_N8_set2",
+  "group": "reference",
+  "label": "N8 set #2 \u00b7 reference/N8_set2",
+  "N": 8,
+  "file": "reference_N8_set2.json"
+ }
+]
